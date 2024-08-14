@@ -1,5 +1,6 @@
 package mcdd.cbq;
 
+import mcdd.cbq.cli.CommandExecutor;
 import mcdd.cbq.generator.StaticGenerator;
 
 import java.io.File;
@@ -9,6 +10,18 @@ import java.io.File;
  */
 public class App {
     public static void main(String[] args) {
+
+        args = new String[]{"generate", "-l", "-a", "-o"};
+//        args = new String[]{"config"};
+//        args = new String[]{"list"};
+        CommandExecutor commandExecutor = new CommandExecutor();
+        commandExecutor.doExecute(args);
+
+//        staticAndDynamicDemo();
+
+    }
+
+    private static void staticAndDynamicDemo() {
         // 获取整个项目的根路径
         String projectPath = System.getProperty("user.dir");
         File parentFile = new File(projectPath).getParentFile();
@@ -17,6 +30,5 @@ public class App {
         // 输出路径：直接输出到项目根目录
         StaticGenerator.copyFilesByRecursion(inputPath, projectPath);
 //        StaticGenerator.copyFilesByHutool(inputPath, projectPath);
-
     }
 }

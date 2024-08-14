@@ -1,4 +1,4 @@
-package mcdd.cbq.cli;
+package mcdd.cbq.cli.example;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;

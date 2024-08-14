@@ -34,3 +34,4 @@ build/
 ### VS Code ###
 .vscode/
 /yuzi-generator-basic/acm-template/
+/yuzi-generator-basic/myweb.html

@@ -32,6 +32,7 @@ public class FreeMarkerTest {
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_32);
         configuration.setDirectoryForTemplateLoading(new File("src/main/resources/templates"));
         configuration.setDefaultEncoding("UTF-8");
+        configuration.setNumberFormat("0.######");
         // step 2: 创建模板对象 并加载模板
         Template template = configuration.getTemplate("myweb.html.ftl");
         // step 3: 创建数据模型 (推荐使用 HashMap)

@@ -1,5 +1,6 @@
 package mcdd.cbq.generator;
 
+import cn.hutool.core.io.FileUtil;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -48,6 +49,11 @@ public class DynamicGenerator {
         // step 2: 创建模板对象 并加载模板
         String templateName = new File(inputPath).getName();
         Template template = configuration.getTemplate(templateName);
+
+        if (!FileUtil.exist(outputPath)) {
+            FileUtil.touch(outputPath);
+        }
+
         // step 4: 指定生成文件，并生成
         Writer writer = new FileWriter(outputPath);
         template.process(model, writer);

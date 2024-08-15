@@ -18,9 +18,9 @@ public class MainTemplateConfig {
     /**
      * 作者注
      */
-    private String author;
+    private String author = "yupi";
     /**
      * 输出信息
      */
-    private String outputText;
+    private String outputText = "sum = ";
 }

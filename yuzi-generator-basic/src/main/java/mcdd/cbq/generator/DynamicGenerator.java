@@ -48,11 +48,6 @@ public class DynamicGenerator {
         // step 2: 创建模板对象 并加载模板
         String templateName = new File(inputPath).getName();
         Template template = configuration.getTemplate(templateName);
-        // step 3: 创建数据模型
-        MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        mainTemplateConfig.setLoop(false);
-        mainTemplateConfig.setAuthor("yupi");
-        mainTemplateConfig.setOutputText("求和结果: ");
         // step 4: 指定生成文件，并生成
         Writer writer = new FileWriter(outputPath);
         template.process(model, writer);

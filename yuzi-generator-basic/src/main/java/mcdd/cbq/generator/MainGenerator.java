@@ -38,9 +38,6 @@ public class MainGenerator {
 
     public static void main(String[] args) throws TemplateException, IOException {
         MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
-        mainTemplateConfig.setAuthor("yupi");
-        mainTemplateConfig.setLoop(true);
-        mainTemplateConfig.setOutputText("求和结果：");
         doGenerate(mainTemplateConfig);
     }
 }

@@ -66,7 +66,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>mcdd.cbq.maker.App</mainClass> <!-- 替换为你的主类的完整类名 -->
+                            <mainClass>mcdd.cbq.maker.Main</mainClass> <!-- 替换为你的主类的完整类名 -->
                         </manifest>
                     </archive>
                 </configuration>

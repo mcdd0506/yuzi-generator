@@ -19,16 +19,17 @@
         "condition": "needGit"
       },
       {
+        "inputPath": "README.md",
+        "outputPath": "README.md",
+        "type": "file",
+        "generateType": "static",
+        "condition": "needGit"
+      },
+      {
         "inputPath": "src/com/yupi/acm/MainTemplate.java.ftl",
         "outputPath": "src/com/yupi/acm/MainTemplate.java",
         "type": "file",
         "generateType": "dynamic"
-      },
-      {
-        "inputPath": "README.md",
-        "outputPath": "README.md",
-        "type": "file",
-        "generateType": "static"
       }
     ]
   },

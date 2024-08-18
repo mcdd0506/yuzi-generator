@@ -13,6 +13,7 @@ import mcdd.cbq.maker.meta.enums.FileTypeEnum;
 import mcdd.cbq.maker.template.enums.FileFilterRangeEnum;
 import mcdd.cbq.maker.template.enums.FileFilterRuleEnum;
 import mcdd.cbq.maker.template.model.FileFilterConfig;
+import mcdd.cbq.maker.template.model.TemplateMakerConfig;
 import mcdd.cbq.maker.template.model.TemplateMakerFileConfig;
 import mcdd.cbq.maker.template.model.TemplateMakerModelConfig;
 
@@ -168,6 +169,23 @@ public class TemplateMaker {
         FileUtil.writeUtf8String(JSONUtil.toJsonPrettyStr(newMeta), metaOutputPath);
         return id;
     }
+
+    /**
+     * 制作模板
+     *
+     * @param templateMakerConfig
+     * @return
+     */
+    public static long makeTemplate(TemplateMakerConfig templateMakerConfig) {
+        Meta meta = templateMakerConfig.getMeta();
+        String originProjectPath = templateMakerConfig.getOriginProjectPath();
+        TemplateMakerFileConfig templateMakerFileConfig = templateMakerConfig.getFileConfig();
+        TemplateMakerModelConfig templateMakerModelConfig = templateMakerConfig.getModelConfig();
+        Long id = templateMakerConfig.getId();
+
+        return makeTemplate(meta, originProjectPath, templateMakerFileConfig, templateMakerModelConfig, id);
+    }
+
 
     /**
      * 制作文件模板
